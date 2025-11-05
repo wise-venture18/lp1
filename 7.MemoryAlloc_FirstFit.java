@@ -1,3 +1,13 @@
+// Sample Input :
+// Enter number of memory blocks: 3
+// Enter block sizes:
+// 100 300 200
+// Enter number of processes: 4
+// Enter process sizes:
+// 90 270 80 120
+
+
+
 import java.util.*;
 
 class FirstFit {
