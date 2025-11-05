@@ -76,7 +76,7 @@ class PriorityNonPreemptive {
         }
 
         // Display Averages
-        System.out.printf("\n\nAverage Waiting Time:", avgWT);
-        System.out.printf("\nAverage Turnaround Time:", avgTAT);
+        System.out.printf("\n\nAverage Waiting Time:"+ avgWT);
+        System.out.printf("\nAverage Turnaround Time:"+ avgTAT);
     }
 }
