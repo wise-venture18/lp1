@@ -73,9 +73,8 @@ class FCFS {
         }
         System.out.println();
 
-        // Averages
-        System.out.printf("\nAverage Waiting Time:", avgWT / n);
-        System.out.printf("Average Turnaround Time:", avgTAT / n);
+        // Output: Averages
+        System.out.printf("\n\nAverage Waiting Time: %.2f\n", avgWT / n);
+        System.out.printf("Average Turnaround Time: %.2f\n", avgTAT / n);
     }
 }
-
