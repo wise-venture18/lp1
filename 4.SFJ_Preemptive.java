@@ -4,6 +4,7 @@ class SJFPreemptive {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        // Input: Number of processes
         System.out.print("Enter number of processes: ");
         int n = sc.nextInt();
 
@@ -14,7 +15,7 @@ class SJFPreemptive {
         int[] wt = new int[n];  // Waiting Times
         int[] tat = new int[n]; // Turnaround Times
 
-        // Input process details
+        // Input: Process details
         for (int i = 0; i < n; i++) {
             System.out.print("Process ID: ");
             pid[i] = sc.nextInt();
@@ -26,7 +27,8 @@ class SJFPreemptive {
             System.out.println();
         }
 
-        int complete = 0, time = 0, minRemaining, shortest = -1;
+        int complete = 0, time = 0;
+        int minRemaining, shortest = -1;
         boolean found;
         ArrayList<Integer> order = new ArrayList<>();
 
@@ -61,7 +63,7 @@ class SJFPreemptive {
             }
         }
 
-        // Output results
+        // Output: Process table
         double avgWT = 0, avgTAT = 0;
         System.out.println("\nPID\tAT\tBT\tWT\tTAT");
         for (int i = 0; i < n; i++) {
@@ -70,14 +72,14 @@ class SJFPreemptive {
             System.out.println(pid[i] + "\t" + at[i] + "\t" + bt[i] + "\t" + wt[i] + "\t" + tat[i]);
         }
 
-        // Execution order (Gantt-style)
+        // Output: Execution order (Gantt-style)
         System.out.println("\nExecution Order:");
         for (int x : order) {
             System.out.print("P" + x + " ");
         }
 
-        // Averages
-        System.out.printf("\n\nAverage Waiting Time:", avgWT / n);
-        System.out.printf("Average Turnaround Time:", avgTAT / n);
+        // Output: Averages
+        System.out.printf("\n\nAverage Waiting Time: %.2f\n", avgWT / n);
+        System.out.printf("Average Turnaround Time: %.2f\n", avgTAT / n);
     }
 }
