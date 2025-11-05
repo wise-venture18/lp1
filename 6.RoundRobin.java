@@ -100,7 +100,7 @@ class RoundRobin {
         System.out.println("|");
 
         // Averages
-        System.out.printf("\nAverage Waiting Time: %.2f\n", avgWT / n);
-        System.out.printf("Average Turnaround Time: %.2f\n", avgTAT / n);
+        System.out.printf("\nAverage Waiting Time:"+ avgWT / n);
+        System.out.printf("\nAverage Turnaround Time:"+ avgTAT / n);
     }
 }
